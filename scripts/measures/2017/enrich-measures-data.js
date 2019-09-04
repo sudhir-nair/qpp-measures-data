@@ -127,8 +127,8 @@ function enrichClaimsRelatedMeasures(measures) {
   ];
 
   // to avoid nested iteration, let's sort claims related measures by their measure ID
-  const claimsRelatedMeasures = JSON.parse(fs.readFileSync(path.join(__dirname, '../../claims-related/data/qpp-single-source.json')));
-
+  const claimsRelatedMeasures = JSON.parse(fs.readFileSync(path.join(__dirname, '../../claims-related/data/qpp-single-source-2019.json')));
+  console.log(claimsRelatedMeasures)
   // now for each measure, add the attributes from the claims-related measures set
   measures.forEach(measure => {
     // if the measure is in claimsRelatedMeasures, we need to merge its attributes
